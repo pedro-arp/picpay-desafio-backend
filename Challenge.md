@@ -3,18 +3,12 @@ sistema. Sendo assim, seu sistema deve permitir apenas um cadastro com o mesmo C
 
 Comuns:
 
-- Nome Completo
-- CPF (unico)
-- e-mail (unico)
-- senha
+
 - Usuários podem enviar dinheiro (efetuar transferência) para lojistas e entre usuários;
 
 Lojistas
 
-- Nome Completo
-- CNPJ (unico)
-- e-mail (unico)
-- senha
+
 - Lojistas só recebem transferências, não enviam dinheiro para ninguém;
 
 Validações:
