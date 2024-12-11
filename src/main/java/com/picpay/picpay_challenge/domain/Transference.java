@@ -1,12 +1,19 @@
 package com.picpay.picpay_challenge.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
+@With
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 @Entity
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Transference {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -12,21 +12,13 @@ import lombok.*;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class Profile {
+    @EqualsAndHashCode.Include
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Column(nullable = false)
-    private String fullName;
-
-    @Column(nullable = false, unique = true)
-    private String cpfCnpj;
-
-    @Column(nullable = false, unique = true)
-    private String email;
-
+    private String name;
     @Column(nullable = false)
-    private String password;
-
+    private String description;
 }

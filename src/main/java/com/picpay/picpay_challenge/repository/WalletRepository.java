@@ -4,6 +4,6 @@ import com.picpay.picpay_challenge.domain.Wallet;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface WalletRepository extends JpaRepository<Wallet, Long> {
-    Wallet findByUsuarioId(Long usuarioId);
+    Wallet findByUserId(Long userId);
 }
 

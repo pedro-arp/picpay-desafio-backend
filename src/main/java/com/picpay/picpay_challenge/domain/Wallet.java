@@ -1,10 +1,17 @@
 package com.picpay.picpay_challenge.domain;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
+@With
+@Getter
+@Setter
+@Builder
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 @Entity
-@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Wallet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,1 +1,14 @@
 services:
+  mysql:
+    image: mysql:9.0.1
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_USER: pedro
+      MYSQL_PASSWORD: picpay
+    ports:
+      - "3306:3306"
+    volumes:
+      - picpay-db:/var/lib/mysql
+
+volumes:
+  picpay-db:

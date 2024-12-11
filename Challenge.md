@@ -3,11 +3,9 @@ sistema. Sendo assim, seu sistema deve permitir apenas um cadastro com o mesmo C
 
 Comuns:
 
-
 - Usuários podem enviar dinheiro (efetuar transferência) para lojistas e entre usuários;
 
 Lojistas
-
 
 - Lojistas só recebem transferências, não enviam dinheiro para ninguém;
 
