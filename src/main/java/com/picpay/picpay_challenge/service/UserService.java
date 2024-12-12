@@ -1,7 +1,6 @@
 package com.picpay.picpay_challenge.service;
 
 import com.picpay.picpay_challenge.domain.User;
-import com.picpay.picpay_challenge.mapper.UserMapper;
 import com.picpay.picpay_challenge.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,9 +13,8 @@ import java.util.List;
 public class UserService {
 
     private final UserRepository repository;
-    private final UserMapper mapper;
 
-    public List<User> findAll(String firstName) {
+    public List<User> findAll(String fullName) {
         return repository.findAll();
     }
 

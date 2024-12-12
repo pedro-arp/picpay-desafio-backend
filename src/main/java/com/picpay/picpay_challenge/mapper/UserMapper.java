@@ -2,7 +2,6 @@ package com.picpay.picpay_challenge.mapper;
 
 import com.picpay.picpay_challenge.domain.User;
 import com.picpay.picpay_challenge.request.UserPostRequest;
-import com.picpay.picpay_challenge.request.UserPutRequest;
 import com.picpay.picpay_challenge.response.UserGetResponse;
 import com.picpay.picpay_challenge.response.UserPostResponse;
 import org.mapstruct.Mapper;
