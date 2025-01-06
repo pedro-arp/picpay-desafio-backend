@@ -2,6 +2,7 @@ package com.picpay.picpay_challenge.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.validator.constraints.br.CPF;
 
 @With
 @Getter
@@ -21,7 +22,8 @@ public class User {
     private String fullName;
 
     @Column(nullable = false, unique = true)
-    private String cpfCnpj;
+    @CPF
+    private String cpf;
 
     @Column(nullable = false, unique = true)
     private String email;
