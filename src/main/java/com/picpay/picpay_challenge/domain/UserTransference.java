@@ -2,7 +2,8 @@ package com.picpay.picpay_challenge.domain;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.validator.constraints.br.CPF;
+
+import java.time.LocalDateTime;
 
 @With
 @Getter
@@ -13,18 +14,24 @@ import org.hibernate.validator.constraints.br.CPF;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+public class UserTransference {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    @JoinColumn(name = "payer_id", nullable = false)
+    private User payer;
+
+    @ManyToOne
+    @JoinColumn(name = "payee_id", nullable = false)
+    private User payee;
+
     @Column(nullable = false)
-    private String fullName;
-    @Column(nullable = false, unique = true)
-    @CPF
-    private String cpf;
-    @Column(nullable = false, unique = true)
-    private String email;
+    private Double value;
+
     @Column(nullable = false)
-    private String password;
+    private LocalDateTime localDateTime = LocalDateTime.now();
+
 
 }

@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-public class Transference {
+public class RetailerTransference {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,21 +25,13 @@ public class Transference {
 
     @ManyToOne
     @JoinColumn(name = "payee_id", nullable = false)
-    private User payee;
+    private Retailer payee;
 
     @Column(nullable = false)
     private Double value;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Status status;
-
     @Column(nullable = false)
     private LocalDateTime localDateTime = LocalDateTime.now();
 
-    public enum Status {
-        PENDING,
-        SUCCESS,
-        FAILURE
-    }
+
 }
