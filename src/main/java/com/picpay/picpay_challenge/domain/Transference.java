@@ -19,27 +19,19 @@ public class Transference {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "payer_id", nullable = false)
-    private User payer;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "common_user_id")
+    private CommonUser payer;
 
     @ManyToOne
-    @JoinColumn(name = "payee_id", nullable = false)
-    private User payee;
+    @JoinColumn(name = "user_id")
+    private CommonUser payee;
 
     @Column(nullable = false)
     private Double value;
 
-    @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
-    private Status status;
-
     @Column(nullable = false)
     private LocalDateTime localDateTime = LocalDateTime.now();
 
-    public enum Status {
-        PENDING,
-        SUCCESS,
-        FAILURE
-    }
+
 }

@@ -7,9 +7,9 @@ import lombok.Setter;
 @Setter
 @Getter
 @Builder
-public class UserGetResponse {
+public class CommonUserGetResponse {
     private Long id;
     private String fullName;
-    private String cpfCnpj;
+    private String cpf;
     private String email;
 }
