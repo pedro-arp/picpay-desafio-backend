@@ -24,8 +24,12 @@ public class Transference {
     private CommonUser payer;
 
     @ManyToOne
-    @JoinColumn(name = "user_id")
-    private CommonUser payee;
+    @JoinColumn(name = "common_user_payee_id")
+    private CommonUser commonUserPayee;
+
+    @ManyToOne
+    @JoinColumn(name = "retailer_payee_id")
+    private Retailer retailerPayee;
 
     @Column(nullable = false)
     private Double value;

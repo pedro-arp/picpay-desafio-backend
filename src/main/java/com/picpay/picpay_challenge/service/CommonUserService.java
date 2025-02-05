@@ -6,6 +6,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -22,7 +23,7 @@ public class CommonUserService {
         return repository.save(commonUser);
     }
 
-    public CommonUser findByCpf(String cpf) {
+    public Optional<CommonUser> findByCpf(String cpf) {
         return repository.findByCpf(cpf);
     }
 }

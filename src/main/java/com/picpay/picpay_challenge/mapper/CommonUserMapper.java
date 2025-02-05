@@ -8,6 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;
 
 import java.util.List;
+import java.util.Optional;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING)
 public interface CommonUserMapper {
@@ -18,5 +19,5 @@ public interface CommonUserMapper {
 
     List<CommonUserGetResponse> toUserGetResponseList(List<CommonUser> commonUsers);
 
-    CommonUserGetResponse toCommonUserGetResponse(CommonUser commonUser);
+    CommonUserGetResponse toCommonUserGetResponse(Optional<CommonUser> commonUser);
 }

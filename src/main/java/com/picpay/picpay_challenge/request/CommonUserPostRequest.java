@@ -18,10 +18,11 @@ public class CommonUserPostRequest {
     @CPF
     private String cpf;
     @NotBlank(message = "The field 'email' is required")
-    @Email(regexp = "^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,10}$", message = "The e-mail is not valid")
+    @Email(message = "The e-mail is not valid")
     private String email;
     @NotBlank(message = "The field 'password' is required")
     private String password;
+
     private Double accountBalance;
 
 }

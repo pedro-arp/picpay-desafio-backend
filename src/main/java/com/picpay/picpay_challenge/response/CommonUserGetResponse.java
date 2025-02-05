@@ -12,4 +12,6 @@ public class CommonUserGetResponse {
     private String fullName;
     private String cpf;
     private String email;
+    private Double accountBalance;
+
 }

@@ -12,4 +12,6 @@ public class RetailerGetResponse {
     private String fullName;
     private String cnpj;
     private String email;
+    private Double accountBalance;
+
 }
